@@ -1,11 +1,28 @@
 h1 {
-    text-align: center;
-    background-color: #8b8386;
-    padding: 3px;
+  text-align: center;
+  background-color: #8b8386;
+  padding: 3px;
 }
 
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    text-align: center;
+}
+:root {
+    --lightgray: #efefef;
+    --blue: steelblue;
+    --white: #fff;
+    --black: rgba(0, 0, 0, 0.8);
+    --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+  }
+  
+/* side-bar */
 .side-bar-title {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .sidebar {
@@ -16,56 +33,145 @@ h1 {
   overflow: auto;
   background-color: #eee0e5;
 }
+
+.sidebar a {
+  color: black;
+  padding-bottom: 10px;
+  display: flex;
+}
+.sidebar button {
+  padding: 10px;
+  width: 100%;
+  border: solid 1px #eee0e5;
+  margin-bottom: 5px;
+  background-color: #8b475d;
+  font-size: large;
+  border-radius: 10px;
+}
+
+/* container */
 .container {
-    margin: 5px;
-}
-.bar-item {
-    background-color: lightgrey;
-}
-@media only screen and (min-width: 1600px){
-    .container img {
-        width: 380px;
-        height: 380px;
-        border-top: solid #ffa54f;
-        border-bottom: solid #ffa54f;
-    }
+  margin: 5px;
 }
 
-@media only screen and (max-width: 1599px) and (min-width: 1024px){
-    .container img {
-        width: 360px;
-        height: 360px;
-        border-top: solid #458b74;
-        border-bottom: solid #458b74;
-    }
+.open-modal {
+  font-weight: bold;
+  background: var(--blue);
+  color: var(--white);
+  padding: 0.75rem 1.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
 }
-@media only screen and (max-width: 1023px) and (min-width: 768px){
-    .container img {
-        width: 320px;
-        height: 320px;
-        border-top: solid #ffefdb;
-        border-bottom: solid #ffefdb;
-    }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease-in;
 }
-@media only screen and (max-width: 767px) and (min-width: 481px){
-    .container img {
-        width: 280px;
-        height: 280px;
-        border-top: solid #8b8386;
-        border-bottom: solid #8b8386;
-    }
+
+.modal-dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: auto;
+  cursor: default;
 }
-@media only screen and (max-width: 480px){
-    .container img {
-        width: 240px;
-        height: 240px;
-        border-left: solid #8b475d;
-        border-right: solid #8b475d;
-    }
+
+.modal-dialog > * {
+  padding: 1rem;
 }
-a {
-    display:flex;
+
+.modal-header {
+  background: var(--lightgray);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-footer {
+    color: lightgray;
+}
+
+.modal-header .modal-close {
+  font-size: 1.5rem;
+}
+
+.modal p + p {
+  margin-top: 1rem;
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1 !important;
+}
+
+.modal #add-form * {
+    display: flex;
+} 
+
+.modal button {
+    margin-left: 10px;
+}
+.modal .regModal {
+    margin: 10px;
+    align-items: center;
+}
+@media only screen and (min-width: 1600px) {
+  .container img {
+    width: 380px;
+    height: 380px;
+    border-top: solid #ffa54f;
+    border-bottom: solid #ffa54f;
+  }
 }
 
 
-
+/* media query */
+@media only screen and (max-width: 1599px) and (min-width: 1024px) {
+  .container img {
+    width: 360px;
+    height: 360px;
+    border-top: solid #458b74;
+    border-bottom: solid #458b74;
+  }
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .container img {
+    width: 320px;
+    height: 320px;
+    border-top: solid #ffefdb;
+    border-bottom: solid #ffefdb;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 481px) {
+  .container img {
+    width: 280px;
+    height: 280px;
+    border-top: solid #8b8386;
+    border-bottom: solid #8b8386;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container img {
+    width: 240px;
+    height: 240px;
+    border-left: solid #8b475d;
+    border-right: solid #8b475d;
+  }
+}
