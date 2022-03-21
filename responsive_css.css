@@ -1,3 +1,37 @@
+@font-face {
+  font-family: "Nanum Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2)
+      format("woff2"),
+    url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff)
+      format("woff"),
+    url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Nanum Gothic";
+  font-style: normal;
+  font-weight: 800;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.eot?#iefix)
+      format("embedded-opentype"),
+    url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.woff2)
+      format("woff2"),
+    url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.woff)
+      format("woff"),
+    url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-ExtraBold.ttf)
+      format("truetype");
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 h1 {
   text-align: center;
   background-color: #8b8386;
@@ -5,21 +39,21 @@ h1 {
 }
 
 button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: inherit;
-    text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  text-align: center;
 }
 :root {
-    --lightgray: #efefef;
-    --blue: steelblue;
-    --white: #fff;
-    --black: rgba(0, 0, 0, 0.8);
-    --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
-  }
-  
+  --lightgray: #efefef;
+  --blue: steelblue;
+  --white: #fff;
+  --black: rgba(0, 0, 0, 0.8);
+  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+}
+
 /* side-bar */
 .side-bar-title {
   padding-left: 10px;
@@ -47,6 +81,7 @@ button {
   background-color: #8b475d;
   font-size: large;
   border-radius: 10px;
+  color: white;
 }
 
 /* container */
@@ -105,10 +140,10 @@ button {
 }
 
 .modal-footer {
-    color: lightgray;
+  color: lightgray;
 }
 
-.modal-header .modal-close {
+.modal-header {
   font-size: 1.5rem;
 }
 
@@ -122,20 +157,17 @@ button {
 }
 
 .modal #add-form * {
-    display: flex;
-} 
-
-.modal .modal-content {
+  display: flex;
   margin-bottom: 5px;
 }
 
+
 .modal .regModal {
-    width: 40%;
-    text-align: center;
-    justify-content: center;
-    padding: 0px;
-    margin-top: 5px;
-    background-color:  #eee0e5;
+  width: 40%;
+  text-align: center;
+  justify-content: center;
+  padding: 0px;
+  background-color: #eee0e5;
 }
 
 .modal input {
@@ -143,23 +175,26 @@ button {
   justify-content: center;
 }
 
-
+.modal .close-modal {
+  color: #8b8386;
+  font-size: 0.8em;
+}
 
 /* media query */
 @media only screen and (min-width: 1600px) {
   .container img {
     width: 380px;
     height: 380px;
-    border-top: solid #ffa54f;
-    border-bottom: solid #ffa54f;
+    border-top: solid #ffefdb;
+    border-bottom: solid #ffefdb;
   }
 }
 @media only screen and (max-width: 1599px) and (min-width: 1024px) {
   .container img {
     width: 360px;
     height: 360px;
-    border-top: solid #458b74;
-    border-bottom: solid #458b74;
+    border-top: solid #ffefdb;
+    border-bottom: solid #ffefdb;
   }
 }
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
