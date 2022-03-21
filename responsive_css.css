@@ -143,24 +143,15 @@ button {
   justify-content: center;
 }
 
-media only screen and (min-width: 1600px) {
+
+
+/* media query */
+@media only screen and (min-width: 1600px) {
   .container img {
     width: 380px;
     height: 380px;
     border-top: solid #ffa54f;
     border-bottom: solid #ffa54f;
-  }
-}
-
-
-/* media query */
-
-@media only screen (min-width: 1600px) {
-  .container img {
-    width: 360px;
-    height: 360px;
-    border-top: solid #458b74;
-    border-bottom: solid #458b74;
   }
 }
 @media only screen and (max-width: 1599px) and (min-width: 1024px) {
