@@ -68,6 +68,11 @@ button {
   background-color: #eee0e5;
 }
 
+.black {
+  background: var(--black);
+  transition: all 0.45s ease-in;
+}
+
 .sidebar a {
   color: black;
   padding-bottom: 10px;
@@ -112,7 +117,7 @@ button {
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.35s ease-in;
+  transition: all 0.45s ease-in;
 }
 
 .modal-dialog {

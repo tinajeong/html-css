@@ -9,6 +9,7 @@ const container = document.querySelector(".container");
 
 function handleCloseclick() {
     modalClass.classList.remove("is-visible");
+    sidebar.classList.remove("black");
 }
 
 function handleRegClick(event) {
