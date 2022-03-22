@@ -12,14 +12,29 @@ function handleCloseclick() {
     sidebar.classList.remove("black");
 }
 
+function imageExists(image_url){
+
+    var http = new XMLHttpRequest();
+
+    http.open('HEAD', image_url, false);
+    http.send();
+
+    return http.status == 200;
+}
+
 function handleRegClick(event) {
     event.preventDefault();
 
     if(titleInput.value === "") {
         alert("전시회 명을 입력하세요.");
+        return;
     }
     if(imageInput.value === "") {
-        alert("전시회 이미지 경로를 입력하세요.");
+        alert("전시회 이미지 주소를 입력하세요.");
+        return;
+    }
+    else if(!imageExists(imageInput)) {
+        alert("유효한 이미지 주소가 아닙니다.")
     }
     const a = document.createElement('a');
     a.classList.add("bar-item");
