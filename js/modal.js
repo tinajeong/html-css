@@ -12,14 +12,25 @@ function handleCloseclick() {
     sidebar.classList.remove("black");
 }
 
-function imageExists(image_url){
+// function imageExists(image_url){
 
-    var http = new XMLHttpRequest();
+//     fetch(image_url, { method: 'HEAD' })
+//     .then(res => {
+//         if (res.ok) {
+//             console.log('Image exists.');
+//             return true;
+//         } else {
+//             console.log('Image does not exist.');
+//             return false;
+//         }
+//     }).catch(err => console.log('Error:', err));
 
-    http.open('HEAD', image_url, false);
-    http.send();
+//     return false;
+// }
 
-    return http.status == 200;
+
+function imageExists(image_url) {
+    return true;
 }
 
 function handleRegClick(event) {
