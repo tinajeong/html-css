@@ -34,7 +34,8 @@ function handleRegClick(event) {
         return;
     }
     else if(!imageExists(imageInput)) {
-        alert("유효한 이미지 주소가 아닙니다.")
+        alert("유효한 이미지 주소가 아닙니다.");
+        return;
     }
     const a = document.createElement('a');
     a.classList.add("bar-item");
