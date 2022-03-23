@@ -164,6 +164,7 @@ button {
 .modal #add-form * {
   display: flex;
   margin: 5px;
+  width: 80%;
  }
 
 .modal #add-form .regModal {
