@@ -12,24 +12,15 @@ function handleCloseclick() {
   sidebar.classList.remove("black");
 }
 
-function imageExists(image_url) {
-  const headers = new Headers({
-    "Content-Type": "image/png",
-  });
-  console.log(image_url);
-  fetch(image_url, headers)
-    .then((res) => {
-      if (res.ok) {
-        console.log("Image exists.");
-        return true;
-      } else {
-        console.log("Image does not exist.");
-        return false;
-      }
-    })
-    .catch((err) => console.log("Error:", err));
-
-  return false;
+function isValidHttpUrl(url_str) {
+    let url;
+    try {
+      url = new URL(url_str);
+    } catch (_) {
+      return false;  
+    }
+  
+    return url.protocol === "http:" || url.protocol === "https:";
 }
 
 function handleRegClick(event) {
@@ -42,7 +33,7 @@ function handleRegClick(event) {
   if (imageInput.value === "") {
     alert("전시회 이미지 주소를 입력하세요.");
     return;
-  } else if (!imageExists(imageInput.value)) {
+  } else if (!isValidHttpUrl(imageInput.value)) {
     alert("유효한 이미지 주소가 아닙니다.");
     return;
   }
